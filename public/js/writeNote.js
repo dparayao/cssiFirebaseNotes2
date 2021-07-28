@@ -16,14 +16,21 @@ const handleNoteSubmit = () => {
   // 1. Capture the form data
   const noteTitle = document.querySelector('#noteTitle');
   const noteText = document.querySelector('#noteText');
+  const noteTag = document.querySelector('#noteTag');
+
+  console.log(noteTitle.value);
+  console.log(noteText.value);
+  console.log(noteTag.value);
   // 2. Format the data and write it to our database
   firebase.database().ref(`users/${googleUser.uid}`).push({
     title: noteTitle.value,
-    text: noteText.value
+    text: noteText.value,
+    tag: noteTag.value
   })
   // 3. Clear the form so that we can write a new note
   .then(() => {
     noteTitle.value = "";
     noteText.value = "";
+    noteTag.value = "";
   });
 }

@@ -17,6 +17,21 @@ input::placeholder {
   border-radius: 5px;
 }
 
+div.content {
+    color: #6d6875;
+    padding: 1%;
+}
+
+div.content:hover {
+    color: #1d3557;
+    font-weight: bold;
+
+}
+
+div.card-content {
+    padding: 5%;
+}
+
 .title.no-padding {
   margin-bottom: 0 !important;
 }
@@ -32,4 +47,15 @@ input::placeholder {
 .fa {
   color: ghostwhite;
   margin: 10px
+}
+
+#footer-text {
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 8%;
+}
+
+#footer-textUser {
+    font-weight: bold;
+    white-space: nowrap;
 }
